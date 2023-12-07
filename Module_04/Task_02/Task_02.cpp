@@ -91,14 +91,15 @@ int main()
 	Address* arrAdrs = new Address[sizeN];
 
 	for (int i = 0; i < sizeN; ++i) {
-		file_to_read >> current_str;
-		(arrAdrs + i)->setCity(current_str);
-		file_to_read >> current_str;
-		(arrAdrs + i)->setStreet(current_str);
-		file_to_read >> current_str;
-		(arrAdrs + i)->setHouse(stoi(current_str));
-		file_to_read >> current_str;
-		(arrAdrs + i)->setAprt(stoi(current_str));
+		std::string city;
+		file_to_read >> city;
+		std::string street;
+		file_to_read >> street;
+		std::string house;
+		file_to_read >> house;
+		std::string apart;
+		file_to_read >> apart;
+		arrAdrs[i] = Address(city, street, stoi(house), stoi(apart));
 	}
 
 	file_to_read.close();

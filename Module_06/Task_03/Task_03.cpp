@@ -1,200 +1,26 @@
 ﻿#include <iostream>
 #include <sstream>
 
-class Figure {
+#include "0_Figure.h"
 
-public:
-    Figure() : Figure(0) {
-        setName("Фигура");
-    }
-    int getShapeCount() {
-        return this->ShapeCount;
-    }
-    std::string getName() {
-        return this->shapeName;
-    }
+#include "01.0_triangle.h"
+#include "01.1_rt.h"
+#include "01.2_io.h"
+#include "01.3_et.h"
 
-    void displayName() {
-        std::cout << this->getName() << ":" << std::endl;
-    };
-    void displaySide() {
-        std::cout << "Стороны: ";
-        for (int i = 0; i < this->getShapeCount(); ++i) {
-            std::cout << sidesName[i] << "=" << *(this->sideCntr() + i) << " ";
-        };
-        std::cout << std::endl;
-    };
-    void displayAngle() {
-        std::cout << "Углы: ";
-        for (int i = 0; i < this->getShapeCount(); ++i) {
-            std::cout << anglesName[i] << "=" << *(this->angleCntr() + i) << " ";
-        };
-        std::cout << "\n" << std::endl;
-    };
+#include "02.0_quadri.h"
 
+#include "02.1.0_paral.h"
 
-    virtual void printInfo() {
-        displayName();
-        displaySide();
-        displayAngle();
-    }
+#include "02.1.1_rhomb.h"
+#include "02.1.2.0_rect.h"
+#include "02.1.2.1_squire.h"
 
-    virtual const int* sideCntr() {
-        return nullptr;
-    }
-    virtual const int* angleCntr() {
-        return nullptr;
-    }
+//это выглядит страшно, логичнее было бы объеденить классы треугольника-четырехугольника в один файл (наследуются от Фигруры)
+//другие производные фигуры (разные виды треугольников) в отдельный файл с общим предком
+//да, прямоугольник наследуюется от паралепипеда, квадрат наследуются от прямоугольника, это получатся разные файлы (либо конечно тоже можно в один)
 
-
-protected:
-    Figure(int n) {
-        setShape(n);
-        setName("Фигура");
-    }
-
-    void setName(std::string _n) {
-        this->shapeName = _n;
-    }
-    void setShape(int _s) {
-        this->ShapeCount = _s;
-    }
-
-
-private:
-    char sidesName[4] = { 'a', 'b', 'c', 'd' };
-    char anglesName[4] = { 'A', 'B', 'C', 'D' };
-    int ShapeCount;
-    std::string shapeName;
-
-};
-
-
-class Triangle : public Figure {
-public:
-    Triangle(int a, int b, int c, int A, int B, int C) : Figure(tri) {
-        setSides(a, b, c);
-        setAngles(A, B, C);
-
-        setShape(tri);
-
-        setName("Треугольник");
-    }
-
-private:
-    void setSides(int a, int b, int c) {
-        this->triSide[0] = a;
-        this->triSide[1] = b;
-        this->triSide[2] = c;
-    }
-
-    void setAngles(int A, int B, int C) {
-        this->triAngle[0] = A;
-        this->triAngle[1] = B;
-        this->triAngle[2] = C;
-    }
-
-    const int* sideCntr() override {
-        return this->triSide;
-    }
-
-    const int* angleCntr() override {
-        return this->triAngle;
-    }
-
-    int tri = 3;
-    int triSide[3] = {};
-    int triAngle[3] = {};
-};
-
-class RightTriangle : public Triangle {
-public:
-    RightTriangle(int a, int b, int c, int A, int B) : Triangle(a, b, c, A, B, 90) {
-        setName("Прямоугольный треугольник");
-    }
-};
-
-class IsoTriangle : public Triangle {
-public:
-    IsoTriangle(int ac, int b, int AC, int B) : Triangle(ac, b, ac, AC, B, AC) {
-        setName("Равнобедренный треугольник");
-    }
-};
-
-class EquiTriangle : public Triangle {
-public:
-    EquiTriangle(int a) : Triangle(a, a, a, 60, 60, 60) {
-        setName("Равносторонний треугольник");
-    }
-};
-
-class Quadrilateral : public Figure {
-public:
-    Quadrilateral(int a, int b, int c, int d, int A, int B, int C, int D) : Figure(tetra) {
-        setSides(a, b, c, d);
-        setAngles(A, B, C, D);
-
-        setShape(tetra);
-
-        setName("Четырехугольник");
-    }
-
-private:
-    void setSides(int a, int b, int c, int d) {
-        this->tetraSide[0] = a;
-        this->tetraSide[1] = b;
-        this->tetraSide[2] = c;
-        this->tetraSide[3] = d;
-    }
-
-    void setAngles(int A, int B, int C, int D) {
-        this->tetraAngle[0] = A;
-        this->tetraAngle[1] = B;
-        this->tetraAngle[2] = C;
-        this->tetraAngle[3] = D;
-    }
-
-    const int* sideCntr() override {
-        return this->tetraSide;
-    }
-
-    const int* angleCntr() override {
-        return this->tetraAngle;
-    }
-
-    int tetra = 4;
-    int tetraSide[4] = {};
-    int tetraAngle[4] = {};
-};
-
-class Parallelogram : public Quadrilateral {
-public:
-    Parallelogram(int a, int b, int A, int B) : Quadrilateral(a, b, a, b, A, B, A, B) {
-        setName("Параллелограмм");
-    }
-};
-
-class Rhombus : public Parallelogram {
-public:
-    Rhombus(int abcd, int AC, int BD) : Parallelogram(abcd, abcd, AC, BD) {
-        setName("Ромб");
-    }
-};
-
-class Rectangle : public Parallelogram {
-public:
-    Rectangle(int a, int b) : Parallelogram(a, b, 90, 90) {
-        setName("Прямоугольник");
-    }
-};
-
-class Square : public Rectangle {
-public:
-    Square(int a) : Rectangle(a, a) {
-        setName("Квадрат");
-    }
-};
-
+//но в условии дано "каждый класс в отдельный файл"
 
 int main()
 {

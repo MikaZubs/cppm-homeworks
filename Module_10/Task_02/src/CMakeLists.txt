@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.18.0)
+project(hierarchy VERSION 0.1)
+include_directories(libs)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY K:/Module_10/Task_02/bin)
+set(SOURCE_EXE Task_03.cpp)
+add_executable(task03 ${SOURCE_EXE})
+target_link_libraries(src libs)

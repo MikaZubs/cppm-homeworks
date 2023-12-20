@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">K:\Module_10\Task_02\bin\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">K:\_GIT\NETO_HW\cppm-homeworks\Module_10\Task_02\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">HIERARCHY.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">HIERARCHY</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">K:\Module_10\Task_02\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">K:\_GIT\NETO_HW\cppm-homeworks\Module_10\Task_02\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HIERARCHY.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HIERARCHY</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">K:\Module_10\Task_02\bin\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">K:\_GIT\NETO_HW\cppm-homeworks\Module_10\Task_02\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">HIERARCHY.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">HIERARCHY</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">K:\Module_10\Task_02\bin\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">K:\_GIT\NETO_HW\cppm-homeworks\Module_10\Task_02\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">HIERARCHY.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">HIERARCHY</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -119,7 +119,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/Debug/HIERARCHY.lib</ImportLibrary>
-      <ProgramDataBaseFile>K:/Module_10/Task_02/bin/Debug/HIERARCHY.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/bin/Debug/HIERARCHY.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -161,7 +161,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/Release/HIERARCHY.lib</ImportLibrary>
-      <ProgramDataBaseFile>K:/Module_10/Task_02/bin/Release/HIERARCHY.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/bin/Release/HIERARCHY.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -203,7 +203,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/MinSizeRel/HIERARCHY.lib</ImportLibrary>
-      <ProgramDataBaseFile>K:/Module_10/Task_02/bin/MinSizeRel/HIERARCHY.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/bin/MinSizeRel/HIERARCHY.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -244,7 +244,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/RelWithDebInfo/HIERARCHY.lib</ImportLibrary>
-      <ProgramDataBaseFile>K:/Module_10/Task_02/bin/RelWithDebInfo/HIERARCHY.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/bin/RelWithDebInfo/HIERARCHY.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

@@ -110,10 +110,6 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="K:\_GIT\NETO_HW\cppm-homeworks\Module_10\Task_02\build\HIERARCHY.vcxproj">
-      <Project>{5D612B8C-1AE4-345E-8EE5-407B460DEFA4}</Project>
-      <Name>HIERARCHY</Name>
-    </ProjectReference>
     <ProjectReference Include="K:\_GIT\NETO_HW\cppm-homeworks\Module_10\Task_02\build\libs\LIBEARCHY.vcxproj">
       <Project>{22CDECDE-4D2C-37F4-9E0D-D064AF067F2F}</Project>
       <Name>LIBEARCHY</Name>

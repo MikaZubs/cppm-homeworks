@@ -1,4 +1,0 @@
-K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/CMakeFiles/HIERARCHY.dir
-K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/CMakeFiles/ALL_BUILD.dir
-K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/libs/CMakeFiles/LIBEARCHY.dir
-K:/_GIT/NETO_HW/cppm-homeworks/Module_10/Task_02/build/libs/CMakeFiles/ALL_BUILD.dir

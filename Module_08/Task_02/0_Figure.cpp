@@ -9,11 +9,6 @@ Figure::Figure():Figure(0) {
 Figure::Figure(int n) {
     setShape(n);
     setName("Фигура");
-    if (n != 0) {
-        std::stringstream defstr;
-        defstr << this -> getName() << " не создана. Причина - количество сторон должно равнятся \"0\" вместо \"" << this -> ShapeCount << "\"!\n";
-        throw ValExcept(defstr.str());
-    }
 }
 
 int Figure::getShapeCount() {
@@ -24,32 +19,34 @@ std::string Figure::getName() {
 }
 
 void Figure::displayName() {
-    std::cout << this->getName() << ":" << std::endl;
+    std::cout << this->getName() << " ";
 };
 void Figure::displayShapeCount() {
     std::cout << "Количество сторон: " << this->getShapeCount() << std::endl; 
 };
 void Figure::displaySide() {
-    std::cout << "Стороны: ";
+    std::cout << "(" << "cтороны ";
     for (int i = 0; i < this->getShapeCount(); ++i) {
-        std::cout << sidesName[i] << "=" << *(this->sideCntr() + i) << " ";
+        std::cout << *(this->sideCntr() + i);
+        (i < this->getShapeCount()-1) ? std::cout << ", " : std::cout << "; ";
     };
-    std::cout << std::endl;
 };
 void Figure::displayAngle() {
-    std::cout << "Углы: ";
+    std::cout << "углы ";
     for (int i = 0; i < this->getShapeCount(); ++i) {
-        std::cout << anglesName[i] << "=" << *(this->angleCntr() + i) << " ";
+        std::cout << *(this->angleCntr() + i);
+        (i < this->getShapeCount()-1) ? std::cout << ", " : std::cout << ") ";
     };
 };
 
 
 void Figure::printInfo() {
     displayName();
-    displayShapeCount();
+    //displayShapeCount();
     if (this->ShapeCount != 0) {
         displaySide();
         displayAngle();
+        std::cout << "создан";
     }
     std::cout << std::endl;
 }
